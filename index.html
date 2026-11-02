@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FYMDTXLJC0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FYMDTXLJC0');
+</script>
 <title>예수님을 따라걷다</title>
 <meta name="description" content="2026 월드비전 추수감사챌린지 후기">
 <meta property="og:title" content="예수님을 따라걷다 | 2026 추수감사챌린지 후기">
@@ -140,8 +148,8 @@ figcaption{font-family:var(--f-ui);font-size:12.5px;color:var(--ink-soft);margin
 /* 6. 마무리 */
 .close{background:linear-gradient(180deg,#fde4d3 0%,var(--peach) 100%);text-align:center}
 .close h2{text-align:right;font-size:clamp(47px,13vw,58px);line-height:1.2}
-.close .body{display:grid;gap:28px;margin-top:40px;font-size:16.5px;line-height:1.85}
-.close blockquote{margin:0;color:var(--orange);font-style:italic;font-weight:700;font-size:17px}
+.close .body{display:grid;gap:28px;margin-top:40px;font-size:18px;line-height:1.8;font-weight:700;color:#2e2a27}
+.close blockquote{margin:0;color:var(--orange);font-style:italic;font-weight:700;font-size:19px}
 .close blockquote cite{display:block;font-style:italic;margin-top:4px}
 .next{background:var(--peach)}
 .next .wrap{padding-block:8px 56px;text-align:center}
@@ -261,5 +269,13 @@ figcaption{font-family:var(--f-ui);font-size:12.5px;color:var(--ink-soft);margin
   </footer>
 
 </main>
+<script>
+  // 비야토 버튼 클릭을 'biyato_click' 이벤트로 따로 기록
+  document.querySelectorAll('.story').forEach(function(a){
+    a.addEventListener('click', function(){
+      if (typeof gtag === 'function') gtag('event', 'biyato_click', {link_url: a.href, transport_type: 'beacon'});
+    });
+  });
+</script>
 </body>
 </html>
